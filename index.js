@@ -25,7 +25,6 @@ let ulGoods = document.querySelector('.goods_wrap');
 let ulDescription = document.querySelector('.description_wrap');
 
 let modalEl = document.querySelector('.modal');
-let modalOverlayEl = document.querySelector('.modal-overlay');
 
 let closeModal = document.querySelector('.modal-button');
 
@@ -33,7 +32,6 @@ ulCategories.addEventListener('click', classAdd);
 ulGoods.addEventListener('click', classAdd1);
 ulDescription.addEventListener('click', classRemove);
 closeModal.addEventListener('click', modalToggleClass);
-modalOverlayEl.addEventListener('click', modalToggleClass);
 
 function classAdd(event) {
     if (event.target.tagName === 'P') {
@@ -89,5 +87,4 @@ function classRemove(event) {
 }
 function modalToggleClass() {
     modalEl.classList.toggle('d-none');
-    modalOverlayEl.classList.toggle('d-none');
 }
